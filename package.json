@@ -1,14 +1,22 @@
 {
   "name": "tilegrid_gen",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": ["image", "grid", "tile", "sharp"],
+  "files": [
+    "dist"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Generate tile grids from multiple images",
   "dependencies": {
     "sharp": "^0.34.2"
   },
